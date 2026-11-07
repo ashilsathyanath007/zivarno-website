@@ -2,6 +2,7 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
+  "outputDirectory": ".",
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
     { "source": "/about", "destination": "/about.html" },
@@ -35,4 +36,3 @@
     }
   ]
 }
-

@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Zivarno - Online Marketplace for Luxury Handicrafts & Master Carvings",
   "scripts": {
-    "start": "npx serve .",
-    "build": "echo Static site ready"
+    "start": "npx serve ."
   },
   "keywords": [
     "handicrafts",
@@ -16,4 +15,3 @@
   "author": "Zivarno Exports",
   "license": "MIT"
 }
-

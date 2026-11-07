@@ -1,0 +1,136 @@
+/* Zivarno Luxury Handicrafts - Custom Styles */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary-dark: #1a1715;
+  --color-secondary-dark: #24201d;
+  --color-gold: #b0a171;
+  --color-gold-light: #c8b98b;
+  --color-gold-dark: #8c7f53;
+  --color-cream: #fbf9f5;
+  --color-cream-dark: #f0ebe1;
+  --color-sand: #e5dec9;
+  --color-charcoal: #2b2826;
+  --color-muted: #736d67;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #2b2826;
+  background-color: #faf8f5;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: 'EB Garamond', Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+/* Gold Gradient Accents */
+.text-gold {
+  color: #b0a171;
+}
+
+.bg-gold {
+  background-color: #b0a171;
+}
+
+.border-gold {
+  border-color: #b0a171;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #d3c494 0%, #b0a171 50%, #8c7f53 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-btn {
+  background-color: #b0a171;
+  color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.gold-btn:hover {
+  background-color: #1a1715;
+  color: #ffffff;
+  box-shadow: 0 10px 25px -5px rgba(176, 161, 113, 0.3);
+  transform: translateY(-2px);
+}
+
+.gold-outline-btn {
+  border: 1px solid #b0a171;
+  color: #b0a171;
+  transition: all 0.3s ease;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.gold-outline-btn:hover {
+  background-color: #b0a171;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Custom Navbar Glass Blur */
+.glass-nav {
+  background: rgba(26, 23, 21, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(176, 161, 113, 0.15);
+}
+
+/* Luxury Card Hover Effect */
+.luxury-card {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid rgba(176, 161, 113, 0.15);
+}
+
+.luxury-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -10px rgba(26, 23, 21, 0.12);
+  border-color: rgba(176, 161, 113, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f0ebe1;
+}
+::-webkit-scrollbar-thumb {
+  background: #b0a171;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8c7f53;
+}
+
+/* Modal Animations */
+.modal-overlay {
+  transition: opacity 0.3s ease-out;
+}
+.modal-container {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+.modal-enter {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-enter-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Image zoom helper */
+.product-img-zoom {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.group:hover .product-img-zoom {
+  transform: scale(1.06);
+}
+

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Zivarno - Online Marketplace for Handicrafts</title>
+  <meta name="description" content="Get in touch with Zivarno for inquiries on handcrafted art, bespoke wood carving commissions, and global export orders.">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Zivarno | Bespoke Art Inquiries">
+  <meta property="og:description" content="We'd love to hear from you. Inquire about our handcrafted art and custom commissions.">
+  <meta property="og:image" content="images/og-image.png">
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              DEFAULT: '#b0a171',
+              light: '#c8b98b',
+              dark: '#8c7f53',
+              50: '#fbf9f2',
+              100: '#f5f0e1'
+            },
+            charcoal: {
+              DEFAULT: '#1a1715',
+              light: '#282421',
+              card: '#201d1a'
+            },
+            cream: {
+              DEFAULT: '#faf8f5',
+              dark: '#f0ebe1'
+            }
+          },
+          fontFamily: {
+            serif: ['"EB Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-[#faf8f5] text-[#2b2826] antialiased">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-[#141210] text-[#c8b98b] text-xs py-2 px-4 border-b border-[#b0a171]/20">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-[#b0a171] animate-pulse"></span>
+        <span>Authentic Indian Heritage Handicrafts • Global Export Shipping</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+917907265546" class="hover:text-white transition-colors">
+          <i class="fa-solid fa-phone mr-1 text-[#b0a171]"></i> +91 7907265546
+        </a>
+        <span class="text-[#b0a171]/40">|</span>
+        <a href="mailto:zivarnoexports@gmail.com" class="hover:text-white transition-colors">
+          <i class="fa-solid fa-envelope mr-1 text-[#b0a171]"></i> zivarnoexports@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header id="main-navbar" class="sticky top-0 z-40 bg-[#1a1715] transition-all duration-300 py-4 px-6 border-b border-[#b0a171]/20 shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="images/logo.png" alt="Zivarno Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105 duration-300">
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-medium">
+        <a href="index.html" class="text-[#e5dec9] hover:text-[#b0a171] transition-colors pb-1">Home</a>
+        <a href="about.html" class="text-[#e5dec9] hover:text-[#b0a171] transition-colors pb-1">About</a>
+        <a href="products.html" class="text-[#e5dec9] hover:text-[#b0a171] transition-colors pb-1">Products</a>
+        <a href="contact.html" class="text-[#b0a171] border-b-2 border-[#b0a171] pb-1">Contact</a>
+        <a href="https://drive.google.com/file/d/1iQphxBgqb1A7rDOAMErc-wjP4K3Horgy/view?pli=1" target="_blank" rel="noopener noreferrer" class="text-[#e5dec9] hover:text-[#b0a171] transition-colors flex items-center gap-1.5 pb-1">
+          <span>Brochure</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs text-[#b0a171]"></i>
+        </a>
+      </nav>
+
+      <!-- Desktop Action CTA -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="products.html" class="gold-btn text-xs px-5 py-2.5 rounded font-semibold tracking-wider">
+          Explore Catalog
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-[#e5dec9] hover:text-[#b0a171] text-2xl focus:outline-none p-1" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-50 bg-[#1a1715]/95 backdrop-blur-md p-6 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-[#b0a171]/20">
+          <img src="images/logo.png" alt="Zivarno" class="h-10 w-auto">
+          <button id="close-menu-btn" class="text-3xl text-[#e5dec9] hover:text-[#b0a171]">&times;</button>
+        </div>
+        <div class="flex flex-col gap-6 mt-8 text-lg font-serif tracking-wider">
+          <a href="index.html" class="text-[#e5dec9] hover:text-[#b0a171] pl-3">Home</a>
+          <a href="about.html" class="text-[#e5dec9] hover:text-[#b0a171] pl-3">About Us</a>
+          <a href="products.html" class="text-[#e5dec9] hover:text-[#b0a171] pl-3">Products Catalog</a>
+          <a href="contact.html" class="text-[#b0a171] border-l-2 border-[#b0a171] pl-3">Contact Us</a>
+          <a href="https://drive.google.com/file/d/1iQphxBgqb1A7rDOAMErc-wjP4K3Horgy/view?pli=1" target="_blank" class="text-[#e5dec9] hover:text-[#b0a171] pl-3 flex items-center justify-between">
+            <span>Download Brochure</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-sm text-[#b0a171]"></i>
+          </a>
+        </div>
+      </div>
+      <div class="pt-6 border-t border-[#b0a171]/20 text-xs text-[#a09a8e] space-y-2">
+        <p><i class="fa-solid fa-location-dot mr-2 text-[#b0a171]"></i> Calicut, Kerala, India</p>
+        <p><i class="fa-solid fa-envelope mr-2 text-[#b0a171]"></i> zivarnoexports@gmail.com</p>
+        <p><i class="fa-solid fa-phone mr-2 text-[#b0a171]"></i> +91 7907265546</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="relative py-20 sm:py-28 px-6 bg-[#1a1715] text-white text-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="images/contact-hero.jpg" alt="Zivarno Studio" class="w-full h-full object-cover object-center filter brightness-[0.35]">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#1a1715]/70 via-transparent to-[#1a1715]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto">
+      <span class="text-xs uppercase tracking-[0.3em] text-[#b0a171] font-semibold mb-3 inline-block">
+        Get In Touch
+      </span>
+      <h1 class="text-4xl sm:text-6xl font-serif text-[#fbf9f5] mb-6 leading-tight">
+        We’d Love to Hear From You!
+      </h1>
+      <p class="text-base sm:text-lg text-[#e5dec9]/90 font-light max-w-2xl mx-auto leading-relaxed">
+        At Zivarno, we value every connection. Whether you have a question about our luxurious handcrafted creations, want to explore bespoke designs, or simply wish to share your thoughts, our team is here to assist you.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Form & Studio Details Grid -->
+  <section class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- Studio Details Column (5 cols) -->
+      <div class="lg:col-span-5 space-y-8">
+        <div>
+          <span class="text-xs uppercase tracking-[0.25em] text-[#b0a171] font-semibold block mb-2">Our Headquarters</span>
+          <h2 class="text-3xl font-serif text-[#1a1715] mb-4">Connect With Our Studio</h2>
+          <p class="text-sm text-[#666059] leading-relaxed font-light">
+            Feel free to reach out to us using the contact form or through the details provided below. Every inquiry is handled with utmost care and attention, ensuring your experience with Zivarno is as exquisite as our art.
+          </p>
+        </div>
+
+        <!-- Info Cards -->
+        <div class="space-y-4">
+          
+          <!-- Address -->
+          <div class="bg-white p-6 rounded-2xl border border-[#b0a171]/20 shadow-sm flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#faf6ed] text-[#b0a171] flex items-center justify-center shrink-0 border border-[#b0a171]/20">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <h4 class="text-xs uppercase tracking-wider font-semibold text-[#8c7f53] mb-1">Studio Address</h4>
+              <p class="text-sm text-[#1a1715] font-medium leading-relaxed">
+                58/1617, South Beach Road, Kuttichira,<br>
+                Calicut (Kozhikode), Kerala, P.O. 673001, India
+              </p>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="bg-white p-6 rounded-2xl border border-[#b0a171]/20 shadow-sm flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#faf6ed] text-[#b0a171] flex items-center justify-center shrink-0 border border-[#b0a171]/20">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <h4 class="text-xs uppercase tracking-wider font-semibold text-[#8c7f53] mb-1">Telephone & Concierge</h4>
+              <a href="tel:+917907265546" class="text-sm text-[#1a1715] font-medium hover:text-[#b0a171] transition-colors">
+                +91 79072 65546
+              </a>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="bg-white p-6 rounded-2xl border border-[#b0a171]/20 shadow-sm flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#faf6ed] text-[#b0a171] flex items-center justify-center shrink-0 border border-[#b0a171]/20">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+              <h4 class="text-xs uppercase tracking-wider font-semibold text-[#8c7f53] mb-1">Email Correspondence</h4>
+              <a href="mailto:zivarnoexports@gmail.com" class="text-sm text-[#1a1715] font-medium hover:text-[#b0a171] transition-colors">
+                zivarnoexports@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div class="bg-white p-6 rounded-2xl border border-[#b0a171]/20 shadow-sm flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#faf6ed] text-[#b0a171] flex items-center justify-center shrink-0 border border-[#b0a171]/20">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="w-full">
+              <h4 class="text-xs uppercase tracking-wider font-semibold text-[#8c7f53] mb-1">Opening Hours</h4>
+              <div class="text-xs space-y-1 text-[#544e47] mt-2">
+                <div class="flex justify-between">
+                  <span>Mon – Fri:</span>
+                  <span class="font-medium text-[#1a1715]">8:00 am – 8:00 pm</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Saturday:</span>
+                  <span class="font-medium text-[#1a1715]">9:00 am – 7:00 pm</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Sunday:</span>
+                  <span class="font-medium text-[#1a1715]">9:00 am – 9:00 pm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Social Media Badges -->
+        <div class="bg-[#1a1715] text-white p-6 rounded-2xl flex items-center justify-between border border-[#b0a171]/30">
+          <div>
+            <h4 class="font-serif text-lg text-[#fbf9f5]">Follow Our Craft</h4>
+            <p class="text-xs text-[#a09a8e]">Daily behind-the-scenes sculpting & carving</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href="https://www.instagram.com/zivarno" target="_blank" class="w-10 h-10 rounded-full bg-[#24201d] border border-[#b0a171]/40 flex items-center justify-center text-white hover:bg-[#b0a171] hover:text-black transition-colors" title="Instagram">
+              <i class="fa-brands fa-instagram text-lg"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/zivarno" target="_blank" class="w-10 h-10 rounded-full bg-[#24201d] border border-[#b0a171]/40 flex items-center justify-center text-white hover:bg-[#b0a171] hover:text-black transition-colors" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Contact Form Column (7 cols) -->
+      <div class="lg:col-span-7">
+        <div class="bg-white p-8 sm:p-12 rounded-3xl border border-[#b0a171]/25 shadow-xl relative">
+          
+          <h3 class="text-2xl sm:text-3xl font-serif text-[#1a1715] mb-2 font-semibold">
+            Send an Inquiry
+          </h3>
+          <p class="text-xs sm:text-sm text-[#736d67] mb-8 font-light">
+            Fill out the form below. Our concierge team typically replies within 2–4 business hours.
+          </p>
+
+          <form id="contact-form" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              
+              <!-- Name -->
+              <div>
+                <label for="name" class="block text-xs uppercase tracking-wider font-semibold text-[#8c7f53] mb-2">Your Full Name *</label>
+                <input type="text" id="name" required placeholder="e.g. Eleanor Vance" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#b0a171] bg-[#faf8f5] text-sm text-[#1a1715]">
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label for="email" class="block text-xs uppercase tracking-wider font-semibold text-[#8c7f53] mb-2">Email Address *</label>
+                <input type="email" id="email" required placeholder="e.g. eleanor@luxury.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#b0a171] bg-[#faf8f5] text-sm text-[#1a1715]">
+              </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              
+              <!-- Phone -->
+              <div>
+                <label for="phone" class="block text-xs uppercase tracking-wider font-semibold text-[#8c7f53] mb-2">Phone / WhatsApp Number</label>
+                <input type="tel" id="phone" placeholder="+1 (555) 000-0000" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#b0a171] bg-[#faf8f5] text-sm text-[#1a1715]">
+              </div>
+
+              <!-- Subject / Interest -->
+              <div>
+                <label for="subject" class="block text-xs uppercase tracking-wider font-semibold text-[#8c7f53] mb-2">Inquiry Type</label>
+                <select id="subject" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#b0a171] bg-[#faf8f5] text-sm text-[#1a1715]">
+                  <option value="Catalog Artwork Purchase">Catalog Artwork Purchase</option>
+                  <option value="Bespoke Sculpture Commission">Bespoke Sculpture Commission</option>
+                  <option value="Sacred Aranmula Mirror">Sacred Aranmula Mirror</option>
+                  <option value="International Export / Wholesale">International Export / Wholesale</option>
+                  <option value="General Question">General Inquiry</option>
+                </select>
+              </div>
+
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label for="message" class="block text-xs uppercase tracking-wider font-semibold text-[#8c7f53] mb-2">Your Message *</label>
+              <textarea id="message" rows="5" required placeholder="Please describe the artwork you are interested in, preferred dimensions, destination country, or custom requirements..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#b0a171] bg-[#faf8f5] text-sm text-[#1a1715]"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submit-btn" class="w-full gold-btn py-4 rounded-xl font-semibold text-xs tracking-widest uppercase shadow-lg flex items-center justify-center gap-2">
+              <span>Send Message</span>
+              <i class="fa-solid fa-paper-plane text-xs"></i>
+            </button>
+
+          </form>
+
+          <!-- Alternative WhatsApp Inquire -->
+          <div class="mt-6 pt-6 border-t border-gray-100 flex items-center justify-between text-xs text-[#736d67]">
+            <span>Need an immediate response?</span>
+            <a href="https://wa.me/917907265546?text=Hello%20Zivarno,%20I%20have%20an%20inquiry%20regarding%20your%20handcrafted%20artifacts." target="_blank" class="text-[#25D366] font-semibold hover:underline flex items-center gap-1.5">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+              <span>WhatsApp Direct</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Google Map Section -->
+  <section class="py-12 px-6 max-w-7xl mx-auto">
+    <div class="rounded-3xl overflow-hidden shadow-lg border border-[#b0a171]/20 bg-white">
+      <div class="p-6 border-b border-gray-100 flex items-center justify-between">
+        <div>
+          <h3 class="font-serif text-lg text-[#1a1715]">Studio Location</h3>
+          <p class="text-xs text-[#736d67]">South Beach Road, Kuttichira, Kozhikode, Kerala 673001</p>
+        </div>
+        <a href="https://maps.google.com/?q=South+Beach+Road+Kuttichira+Kozhikode+Kerala+673001" target="_blank" class="gold-outline-btn px-4 py-2 rounded text-xs font-semibold tracking-wider">
+          Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+        </a>
+      </div>
+      <div class="aspect-[16/7] w-full">
+        <iframe 
+          title="Zivarno Location Map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15652.885698375895!2d75.772591!3d11.244955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6593a1c09eb67%3A0xe54e6fe8e2ce2d73!2sKuttichira%2C%20Kozhikode%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#141210] text-[#a09a8e] pt-16 pb-8 border-t border-[#b0a171]/20">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-[#2e2a25]">
+      <div>
+        <img src="images/logo.png" alt="Zivarno" class="h-10 w-auto mb-4">
+        <p class="text-xs leading-relaxed text-[#8a8479] mb-6">
+          Zivarno celebrates the vibrant colors and timeless traditions of life through museum-grade handcrafted art and ethical artisan empowerment.
+        </p>
+        <div class="flex items-center gap-4 text-[#c8b98b]">
+          <a href="https://www.instagram.com/zivarno" target="_blank" class="w-9 h-9 rounded-full bg-[#201d1a] border border-[#b0a171]/30 flex items-center justify-center hover:bg-[#b0a171] hover:text-black transition-colors" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/zivarno" target="_blank" class="w-9 h-9 rounded-full bg-[#201d1a] border border-[#b0a171]/30 flex items-center justify-center hover:bg-[#b0a171] hover:text-black transition-colors" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:zivarnoexports@gmail.com" class="w-9 h-9 rounded-full bg-[#201d1a] border border-[#b0a171]/30 flex items-center justify-center hover:bg-[#b0a171] hover:text-black transition-colors" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-sm font-serif text-white uppercase tracking-widest mb-4">Explore</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="index.html" class="hover:text-[#b0a171] transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-[#b0a171] transition-colors">About Us</a></li>
+          <li><a href="products.html" class="hover:text-[#b0a171] transition-colors">Products Catalog</a></li>
+          <li><a href="contact.html" class="hover:text-[#b0a171] transition-colors">Contact & Bespoke Orders</a></li>
+          <li><a href="https://drive.google.com/file/d/1iQphxBgqb1A7rDOAMErc-wjP4K3Horgy/view?pli=1" target="_blank" class="hover:text-[#b0a171] transition-colors">Official PDF Brochure</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-sm font-serif text-white uppercase tracking-widest mb-4">Studio Location</h4>
+        <div class="text-xs space-y-2 text-[#8a8479]">
+          <p class="text-[#c8b98b] font-medium">Zivarno Exports (OPC) Pvt. Ltd.</p>
+          <p>58/1617, South Beach Road, Kuttichira,</p>
+          <p>Kozhikode (Calicut), Kerala 673001, India</p>
+          <p class="pt-2"><strong class="text-white">Phone:</strong> +91 7907265546</p>
+          <p><strong class="text-white">Email:</strong> zivarnoexports@gmail.com</p>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-sm font-serif text-white uppercase tracking-widest mb-4">Operating Hours</h4>
+        <ul class="text-xs space-y-2 text-[#8a8479]">
+          <li class="flex justify-between border-b border-[#2e2a25] pb-1">
+            <span>Monday – Friday:</span>
+            <span class="text-white">8:00 am – 8:00 pm</span>
+          </li>
+          <li class="flex justify-between border-b border-[#2e2a25] pb-1">
+            <span>Saturday:</span>
+            <span class="text-white">9:00 am – 7:00 pm</span>
+          </li>
+          <li class="flex justify-between border-b border-[#2e2a25] pb-1">
+            <span>Sunday:</span>
+            <span class="text-white">9:00 am – 9:00 pm</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#6b655b]">
+      <p>&copy; <span class="current-year">2026</span> Zivarno. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <span>Made with <i class="fa-solid fa-heart text-[#b0a171]"></i> by <a href="https://www.linkedin.com/in/joeljorly/" target="_blank" class="hover:text-[#b0a171] transition-colors underline">Joel Jorly</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/917907265546?text=Hello%20Zivarno,%20I%20would%20like%20to%20inquire%20about%20your%20handcrafted%20artifacts." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#20bd5a] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl transition-transform hover:scale-110 group" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="absolute right-16 bg-[#1a1715] text-[#e5dec9] text-xs px-3 py-1.5 rounded-md whitespace-nowrap shadow-lg border border-[#b0a171]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+      Chat with Concierge
+    </span>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Contact form submission handler
+    const form = document.getElementById('contact-form');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const submitBtn = document.getElementById('submit-btn');
+        const originalContent = submitBtn.innerHTML;
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Submitting...`;
+
+        setTimeout(() => {
+          showToast(`Thank you, ${name}! Your inquiry has been received. Our team will contact you shortly.`, 'success');
+          form.reset();
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `<i class="fa-solid fa-check"></i> Inquiry Sent!`;
+          
+          setTimeout(() => {
+            submitBtn.innerHTML = originalContent;
+          }, 3000);
+        }, 1200);
+      });
+    }
+  </script>
+</body>
+</html>
+

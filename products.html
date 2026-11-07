@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Zivarno - Online Marketplace for Handicrafts</title>
+  <meta name="description" content="Explore Zivarno's exquisite collection of master wood carvings, sacred Aranmula mirrors, and authentic handmade artifacts from India.">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Products Collection | Zivarno">
+  <meta property="og:description" content="Explore master hand-carved wood sculptures, sacred Aranmula Kannadi, and luxury artisan creations.">
+  <meta property="og:image" content="images/og-image.png">
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              DEFAULT: '#b0a171',
+              light: '#c8b98b',
+              dark: '#8c7f53',
+              50: '#fbf9f2',
+              100: '#f5f0e1'
+            },
+            charcoal: {
+              DEFAULT: '#1a1715',
+              light: '#282421',
+              card: '#201d1a'
+            },
+            cream: {
+              DEFAULT: '#faf8f5',
+              dark: '#f0ebe1'
+            }
+          },
+          fontFamily: {
+            serif: ['"EB Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-[#faf8f5] text-[#2b2826] antialiased">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-[#141210] text-[#c8b98b] text-xs py-2 px-4 border-b border-[#b0a171]/20">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-[#b0a171] animate-pulse"></span>
+        <span>Authentic Indian Heritage Handicrafts • Global Export Shipping</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+917907265546" class="hover:text-white transition-colors">
+          <i class="fa-solid fa-phone mr-1 text-[#b0a171]"></i> +91 7907265546
+        </a>
+        <span class="text-[#b0a171]/40">|</span>
+        <a href="mailto:zivarnoexports@gmail.com" class="hover:text-white transition-colors">
+          <i class="fa-solid fa-envelope mr-1 text-[#b0a171]"></i> zivarnoexports@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header id="main-navbar" class="sticky top-0 z-40 bg-[#1a1715] transition-all duration-300 py-4 px-6 border-b border-[#b0a171]/20 shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="images/logo.png" alt="Zivarno Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105 duration-300">
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-medium">
+        <a href="index.html" class="text-[#e5dec9] hover:text-[#b0a171] transition-colors pb-1">Home</a>
+        <a href="about.html" class="text-[#e5dec9] hover:text-[#b0a171] transition-colors pb-1">About</a>
+        <a href="products.html" class="text-[#b0a171] border-b-2 border-[#b0a171] pb-1">Products</a>
+        <a href="contact.html" class="text-[#e5dec9] hover:text-[#b0a171] transition-colors pb-1">Contact</a>
+        <a href="https://drive.google.com/file/d/1iQphxBgqb1A7rDOAMErc-wjP4K3Horgy/view?pli=1" target="_blank" rel="noopener noreferrer" class="text-[#e5dec9] hover:text-[#b0a171] transition-colors flex items-center gap-1.5 pb-1">
+          <span>Brochure</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs text-[#b0a171]"></i>
+        </a>
+      </nav>
+
+      <!-- Desktop Action CTA -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="https://drive.google.com/file/d/1iQphxBgqb1A7rDOAMErc-wjP4K3Horgy/view?pli=1" target="_blank" class="gold-outline-btn text-xs px-4 py-2 rounded font-semibold tracking-wider">
+          <i class="fa-solid fa-file-pdf mr-1"></i> Catalog PDF
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-[#e5dec9] hover:text-[#b0a171] text-2xl focus:outline-none p-1" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-50 bg-[#1a1715]/95 backdrop-blur-md p-6 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-[#b0a171]/20">
+          <img src="images/logo.png" alt="Zivarno" class="h-10 w-auto">
+          <button id="close-menu-btn" class="text-3xl text-[#e5dec9] hover:text-[#b0a171]">&times;</button>
+        </div>
+        <div class="flex flex-col gap-6 mt-8 text-lg font-serif tracking-wider">
+          <a href="index.html" class="text-[#e5dec9] hover:text-[#b0a171] pl-3">Home</a>
+          <a href="about.html" class="text-[#e5dec9] hover:text-[#b0a171] pl-3">About Us</a>
+          <a href="products.html" class="text-[#b0a171] border-l-2 border-[#b0a171] pl-3">Products Catalog</a>
+          <a href="contact.html" class="text-[#e5dec9] hover:text-[#b0a171] pl-3">Contact Us</a>
+          <a href="https://drive.google.com/file/d/1iQphxBgqb1A7rDOAMErc-wjP4K3Horgy/view?pli=1" target="_blank" class="text-[#e5dec9] hover:text-[#b0a171] pl-3 flex items-center justify-between">
+            <span>Download Brochure</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-sm text-[#b0a171]"></i>
+          </a>
+        </div>
+      </div>
+      <div class="pt-6 border-t border-[#b0a171]/20 text-xs text-[#a09a8e] space-y-2">
+        <p><i class="fa-solid fa-location-dot mr-2 text-[#b0a171]"></i> Calicut, Kerala, India</p>
+        <p><i class="fa-solid fa-envelope mr-2 text-[#b0a171]"></i> zivarnoexports@gmail.com</p>
+        <p><i class="fa-solid fa-phone mr-2 text-[#b0a171]"></i> +91 7907265546</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="bg-[#1a1715] text-white py-16 px-6 relative overflow-hidden border-b border-[#b0a171]/20">
+    <div class="max-w-7xl mx-auto text-center relative z-10">
+      <span class="text-xs uppercase tracking-[0.25em] text-[#b0a171] font-semibold mb-2 block">
+        Museum Quality Artifacts
+      </span>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif text-[#fbf9f5] mb-6">
+        Exquisite Creations & Masterpieces
+      </h1>
+      <p class="text-base sm:text-lg text-[#e5dec9]/90 font-light max-w-3xl mx-auto leading-relaxed">
+        Welcome to Zivarno, where luxury meets artistry. Our exquisite collection of art and handicrafts is meticulously crafted to perfection, exuding elegance and sophistication. Explore our offerings to discover the perfect statement piece that enhances your decor. Each creation is a timeless work of art, designed to elevate your space and leave a lasting impression.
+      </p>
+    </div>
+  </section>
+
+  <!-- Search & Filter Controls -->
+  <section class="py-10 px-6 max-w-7xl mx-auto">
+    <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#b0a171]/20 flex flex-col lg:flex-row items-center justify-between gap-6">
+      
+      <!-- Filter Categories -->
+      <div class="flex flex-wrap items-center gap-2 w-full lg:w-auto">
+        <span class="text-xs font-semibold uppercase tracking-wider text-[#8c7f53] mr-2">Filter By:</span>
+        <button class="cat-filter-btn px-4 py-2 rounded-lg text-xs font-semibold tracking-wider transition-all border border-[#b0a171] bg-[#1a1715] text-[#b0a171]" data-category="all">
+          All Creations
+        </button>
+        <button class="cat-filter-btn px-4 py-2 rounded-lg text-xs font-semibold tracking-wider transition-all border border-gray-200 bg-white text-[#544e47] hover:border-[#b0a171]" data-category="Divine Sculptures">
+          Divine Sculptures
+        </button>
+        <button class="cat-filter-btn px-4 py-2 rounded-lg text-xs font-semibold tracking-wider transition-all border border-gray-200 bg-white text-[#544e47] hover:border-[#b0a171]" data-category="Sacred Mirrors">
+          Sacred Mirrors
+        </button>
+        <button class="cat-filter-btn px-4 py-2 rounded-lg text-xs font-semibold tracking-wider transition-all border border-gray-200 bg-white text-[#544e47] hover:border-[#b0a171]" data-category="Traditional Crafts">
+          Traditional Crafts
+        </button>
+        <button class="cat-filter-btn px-4 py-2 rounded-lg text-xs font-semibold tracking-wider transition-all border border-gray-200 bg-white text-[#544e47] hover:border-[#b0a171]" data-category="Cultural Art">
+          Cultural Art
+        </button>
+      </div>
+
+      <!-- Search Input & Count -->
+      <div class="flex items-center gap-4 w-full lg:w-auto justify-between lg:justify-end">
+        <div class="relative w-full sm:w-64">
+          <input type="text" id="product-search" placeholder="Search by name, deity..." class="w-full pl-9 pr-4 py-2 text-xs rounded-lg border border-gray-200 focus:outline-none focus:border-[#b0a171] bg-[#faf8f5]">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-gray-400 text-xs"></i>
+        </div>
+        <span id="product-count" class="text-xs text-[#8c7f53] font-medium whitespace-nowrap">
+          9 creations
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="pb-24 px-6 max-w-7xl mx-auto">
+    <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Injected via JavaScript from products-data.js -->
+    </div>
+  </section>
+
+  <!-- Product Detail Modal -->
+  <div id="product-modal" class="hidden fixed inset-0 z-50 bg-[#1a1715]/85 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-[#b0a171]/30 relative my-auto">
+      
+      <!-- Close Button -->
+      <button id="close-modal-btn" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-[#1a1715] text-white flex items-center justify-center text-xl hover:bg-[#b0a171] transition-colors" aria-label="Close modal">
+        &times;
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 p-6 sm:p-10">
+        
+        <!-- Media Column -->
+        <div class="md:col-span-6 space-y-4">
+          <!-- Main Display -->
+          <div class="aspect-square sm:aspect-[4/5] bg-[#faf8f5] rounded-2xl overflow-hidden border border-[#b0a171]/20 flex items-center justify-center p-2">
+            <img id="modal-main-img" src="" alt="Product Large View" class="w-full h-full object-contain">
+          </div>
+
+          <!-- Thumbnails -->
+          <div id="modal-thumbs" class="flex flex-wrap gap-2 justify-center">
+            <!-- Thumbs injected dynamically -->
+          </div>
+        </div>
+
+        <!-- Details Column -->
+        <div class="md:col-span-6 flex flex-col justify-between">
+          <div>
+            <span id="modal-category" class="inline-block text-[10px] tracking-widest uppercase font-semibold text-[#8c7f53] bg-[#fbf9f2] px-3 py-1 rounded border border-[#b0a171]/25 mb-3"></span>
+            
+            <h2 id="modal-title" class="text-2xl sm:text-3xl font-serif text-[#1a1715] font-semibold mb-4 leading-snug"></h2>
+
+            <div id="modal-specs"></div>
+
+            <div class="border-t border-[#f0ebe1] pt-4 mt-4">
+              <h4 class="text-xs uppercase tracking-wider text-[#8c7f53] font-semibold mb-2">Heritage Story & Details</h4>
+              <div id="modal-desc" class="text-xs sm:text-sm text-[#544e47] leading-relaxed font-light space-y-3 max-h-60 overflow-y-auto pr-2"></div>
+            </div>
+          </div>
+
+          <!-- Direct Inquiries Action -->
+          <div class="border-t border-[#b0a171]/20 pt-6 mt-6 space-y-3">
+            <div class="text-xs text-[#736d67] flex items-center gap-2 mb-2">
+              <i class="fa-solid fa-circle-check text-[#b0a171]"></i>
+              <span>Authenticity Certified • Museum-Grade Packaging • Worldwide Shipping</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <a id="modal-wa-btn" href="#" target="_blank" class="bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 px-4 rounded-xl text-xs font-semibold tracking-wider flex items-center justify-center gap-2 transition-transform hover:-translate-y-0.5 shadow-md">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                <span>Inquire on WhatsApp</span>
+              </a>
+              <a id="modal-mail-btn" href="#" class="gold-btn py-3 px-4 rounded-xl text-xs font-semibold tracking-wider flex items-center justify-center gap-2 shadow-md">
+                <i class="fa-regular fa-envelope text-base"></i>
+                <span>Email Concierge</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#141210] text-[#a09a8e] pt-16 pb-8 border-t border-[#b0a171]/20">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-[#2e2a25]">
+      <div>
+        <img src="images/logo.png" alt="Zivarno" class="h-10 w-auto mb-4">
+        <p class="text-xs leading-relaxed text-[#8a8479] mb-6">
+          Zivarno celebrates the vibrant colors and timeless traditions of life through museum-grade handcrafted art and ethical artisan empowerment.
+        </p>
+        <div class="flex items-center gap-4 text-[#c8b98b]">
+          <a href="https://www.instagram.com/zivarno" target="_blank" class="w-9 h-9 rounded-full bg-[#201d1a] border border-[#b0a171]/30 flex items-center justify-center hover:bg-[#b0a171] hover:text-black transition-colors" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/zivarno" target="_blank" class="w-9 h-9 rounded-full bg-[#201d1a] border border-[#b0a171]/30 flex items-center justify-center hover:bg-[#b0a171] hover:text-black transition-colors" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:zivarnoexports@gmail.com" class="w-9 h-9 rounded-full bg-[#201d1a] border border-[#b0a171]/30 flex items-center justify-center hover:bg-[#b0a171] hover:text-black transition-colors" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-sm font-serif text-white uppercase tracking-widest mb-4">Explore</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="index.html" class="hover:text-[#b0a171] transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-[#b0a171] transition-colors">About Us</a></li>
+          <li><a href="products.html" class="hover:text-[#b0a171] transition-colors">Products Catalog</a></li>
+          <li><a href="contact.html" class="hover:text-[#b0a171] transition-colors">Contact & Bespoke Orders</a></li>
+          <li><a href="https://drive.google.com/file/d/1iQphxBgqb1A7rDOAMErc-wjP4K3Horgy/view?pli=1" target="_blank" class="hover:text-[#b0a171] transition-colors">Official PDF Brochure</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-sm font-serif text-white uppercase tracking-widest mb-4">Studio Location</h4>
+        <div class="text-xs space-y-2 text-[#8a8479]">
+          <p class="text-[#c8b98b] font-medium">Zivarno Exports (OPC) Pvt. Ltd.</p>
+          <p>58/1617, South Beach Road, Kuttichira,</p>
+          <p>Kozhikode (Calicut), Kerala 673001, India</p>
+          <p class="pt-2"><strong class="text-white">Phone:</strong> +91 7907265546</p>
+          <p><strong class="text-white">Email:</strong> zivarnoexports@gmail.com</p>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-sm font-serif text-white uppercase tracking-widest mb-4">Operating Hours</h4>
+        <ul class="text-xs space-y-2 text-[#8a8479]">
+          <li class="flex justify-between border-b border-[#2e2a25] pb-1">
+            <span>Monday – Friday:</span>
+            <span class="text-white">8:00 am – 8:00 pm</span>
+          </li>
+          <li class="flex justify-between border-b border-[#2e2a25] pb-1">
+            <span>Saturday:</span>
+            <span class="text-white">9:00 am – 7:00 pm</span>
+          </li>
+          <li class="flex justify-between border-b border-[#2e2a25] pb-1">
+            <span>Sunday:</span>
+            <span class="text-white">9:00 am – 9:00 pm</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#6b655b]">
+      <p>&copy; <span class="current-year">2026</span> Zivarno. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <span>Made with <i class="fa-solid fa-heart text-[#b0a171]"></i> by <a href="https://www.linkedin.com/in/joeljorly/" target="_blank" class="hover:text-[#b0a171] transition-colors underline">Joel Jorly</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/917907265546?text=Hello%20Zivarno,%20I%20am%20interested%20in%20your%20handcrafted%20artifacts." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#20bd5a] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl transition-transform hover:scale-110 group" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="absolute right-16 bg-[#1a1715] text-[#e5dec9] text-xs px-3 py-1.5 rounded-md whitespace-nowrap shadow-lg border border-[#b0a171]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+      Chat with Concierge
+    </span>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/products-page.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,19 @@
+{
+  "name": "zivarno-handicrafts",
+  "version": "1.0.0",
+  "description": "Zivarno - Online Marketplace for Luxury Handicrafts & Master Carvings",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo Static site ready"
+  },
+  "keywords": [
+    "handicrafts",
+    "wood-carving",
+    "aranmula-mirror",
+    "kerala-art",
+    "luxury-artisan"
+  ],
+  "author": "Zivarno Exports",
+  "license": "MIT"
+}
+

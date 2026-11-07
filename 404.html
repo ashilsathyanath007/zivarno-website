@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Zivarno</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: { DEFAULT: '#b0a171' },
+            charcoal: { DEFAULT: '#1a1715' }
+          },
+          fontFamily: {
+            serif: ['"EB Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-[#1a1715] text-[#fbf9f5] min-h-screen flex flex-col justify-between">
+  
+  <header class="py-6 px-6 border-b border-[#b0a171]/20">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Zivarno" class="h-10 w-auto">
+      </a>
+      <a href="index.html" class="text-xs uppercase tracking-widest text-[#b0a171] hover:text-white transition-colors">
+        Back to Home
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-2xl mx-auto px-6 py-20 text-center">
+    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-[#24201d] border border-[#b0a171]/30 flex items-center justify-center text-3xl text-[#b0a171]">
+      <i class="fa-solid fa-compass"></i>
+    </div>
+    <span class="text-xs uppercase tracking-[0.3em] text-[#b0a171] font-semibold block mb-2">Error 404</span>
+    <h1 class="text-4xl sm:text-5xl font-serif mb-6">Page Not Found</h1>
+    <p class="text-sm sm:text-base text-[#e5dec9]/80 font-light mb-8 leading-relaxed">
+      The artifact or page you are looking for may have been moved, renamed, or is currently undergoing conservation.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="index.html" class="gold-btn px-6 py-3 rounded text-xs font-semibold tracking-widest uppercase">
+        Return to Home
+      </a>
+      <a href="products.html" class="gold-outline-btn px-6 py-3 rounded text-xs font-semibold tracking-widest uppercase">
+        Explore Products
+      </a>
+    </div>
+  </main>
+
+  <footer class="py-6 px-6 border-t border-[#b0a171]/20 text-center text-xs text-[#a09a8e]">
+    <p>&copy; 2026 Zivarno. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
